@@ -18,6 +18,7 @@ function queryMeta(key: string, defaultValue?: string): string {
     const meta = document.head.querySelector(
       `meta[name='${key}']`,
     ) as HTMLMetaElement;
+    console.log("meta", meta);
     ret = meta?.content ?? "";
   } else {
     ret = defaultValue ?? "";
